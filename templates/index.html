@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/js/index.js" defer></script>
+    <title>Sleep well - Schedule your nights</title>
+</head>
+<body>
+    <main>
+        <form action="/api" method="GET">
+            <div class="input-form">
+                <label for="mode 1">Mode 1</label>
+                <input type="radio" id="mode1" name="mode" value="mode1" checked>
+            </div>
+            <div class="input-form">
+                <label for="mode 2">Mode 2</label>
+                <input type="radio" id="mode2" name="mode" value="mode2">
+            </div>
+            <div id="input-hour" class="input-form">
+                <label for="hours">Hour</label>
+                <input type="text" id="hour" name="hour" required />
+            </div>
+            <div id="input-minutes" class="input-form">
+                <label for="minutes">Minutes</label>
+                <input type="text" id="minutes" name="minutes" required />
+            </div>
+            <input type="submit" value="Calculate">
+        </form>
+    </main>
+</body>
+</html>
