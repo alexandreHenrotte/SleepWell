@@ -1,0 +1,21 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/clouds.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+
+  color: white;
+}
+
+label {
+  cursor: inherit;
+}

@@ -1,0 +1,90 @@
+html,
+body {
+  height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sleepwell-logo {
+  height: auto;
+  width: 400px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: 10px;
+}
+
+.input-form {
+  margin: 10px;
+}
+
+#mode1-inputs {
+  display: none;
+  margin-top: 0;
+  color: black;
+}
+
+.input-mode {
+  background-color: #0ea7da;
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer !important;
+}
+
+#mode1-inputs {
+  background-color: white;
+  width: 100%;
+  padding: 15px;
+}
+
+#mode1-container {
+  margin-bottom: 0;
+}
+
+/* Remove circles next to mode input */
+#mode1,
+#mode2 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Remove arrow inside hours and minutes input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#submit-button {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  padding: 15px;
+  margin-top: 50px;
+  background-color: white;
+  border: none;
+  width: max-content;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in;
+}
+
+#submit-button:hover {
+  opacity: 0.75;
+}

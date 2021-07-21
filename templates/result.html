@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/result.css')}}">
+    <title>Sleep well - Dormez mieux</title>
+</head>
+<body>
+    <!--<a href="/">
+        <img id="sleepwell-logo" src="{{url_for('static', filename='images/sleepwell-logo.png')}}" alt="SleepWell-logo">
+    </a>-->
+    <div id="result-container">
+        {% if mode == "mode1" %}
+            <p id="result-text">Nous vous conseillons d'aller vous coucher à une des heures suivantes :</p>
+        {% elif mode == "mode2" %}
+            <p id="result-text">Nous vous conseillons de vous réveiller à une des heures suivantes :</p>
+        {% endif %}
+        <div id="times-container">
+            {% for time in timesAdviced %}
+                <div class="time-container">
+                    <p>{{time.hour}}:{{time.minutes}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
