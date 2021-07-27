@@ -14,18 +14,50 @@ body {
 }
 
 #result-text {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 60px 0;
 }
 
 .time-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     text-align: center;
     background-color: #0ea7da;
-    font-weight: bold;
-    padding: 10px 0;
     margin: 10px 0
 }
 
+.left-time-container {
+    height: 100%;
+    width: 35%;
+    border-right: 1px solid white;
+}
+
+.right-time-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
 .time-container p {
-    margin: 0;
+    margin: 5px;
+}
+
+.result-details {
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+#additional-information {
+    margin: 60px 0;
+}
+
+#additional-information p {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 18px;
+    margin: 5px 0;
 }

@@ -15,16 +15,28 @@
     </a>-->
     <div id="result-container">
         {% if mode == "mode1" %}
-            <p id="result-text">Nous vous conseillons d'aller vous coucher à une des heures suivantes :</p>
+            <p id="result-text">Nous vous conseillons d'aller vous coucher à une des heures suivantes pour avoir un sommeil optimal :</p>
         {% elif mode == "mode2" %}
-            <p id="result-text">Nous vous conseillons de vous réveiller à une des heures suivantes :</p>
+            <p id="result-text">Nous vous conseillons de vous réveiller à une des heures suivantes pour avoir un sommeil optimal :</p>
         {% endif %}
+
         <div id="times-container">
             {% for time in timesAdviced %}
                 <div class="time-container">
-                    <p>{{time.hour}}:{{time.minutes}}</p>
+                    <div class="left-time-container">
+                        <p class="result-level">{{time.level}}</p>
+                    </div>
+                    <div class="right-time-container">
+                        <p class="result-time">{{time.hour}}:{{time.minutes}}</p>
+                        <p class="result-details">({{time.nb_cycles}} cycles - {{time.time_duration}} de sommeil)</p>
+                    </div>
                 </div>
             {% endfor %}
+        </div>
+
+        <div id="additional-information">
+            <p>Il faut généralement 5 à 6 cycles (1 cycle = 90 minutes) pour dormir une bonne nuit.</p>
+            <p>NB : nous avons ici considéré qu'il fallait 15 minutes en moyenne pour s'endormir</p>
         </div>
     </div>
 </body>

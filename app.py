@@ -19,6 +19,7 @@ def process():
     minutes = request.args.get('minutes')
 
     timesAdviced = calculate(mode, hour, minutes)
+    print(timesAdviced)
     return render_template("result.html", mode=mode, timesAdviced=timesAdviced)
 
 

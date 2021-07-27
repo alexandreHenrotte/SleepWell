@@ -27,6 +27,9 @@ function incrementHours(inputId) {
         var valueIncremented = (parseInt(input.value) + 1);
         input.value = (valueIncremented < 10) ? "0" + valueIncremented : valueIncremented;
     }
+    else {
+        input.value = "00";
+    }
 }
 
 function decrementHours(inputId) {
@@ -35,18 +38,27 @@ function decrementHours(inputId) {
         var valueIncremented = (parseInt(input.value) - 1);
         input.value = (valueIncremented < 10) ? "0" + valueIncremented : valueIncremented;
     }
+    else {
+        input.value = "23";
+    }
 }
 
 function incrementMinutes(inputId) {
     var input = document.getElementById(inputId);
-    if (parseInt(input.value) < 50) {
-        input.value = (parseInt(input.value) + 10);
+    if (parseInt(input.value) < 55) {
+        input.value = (parseInt(input.value) + 5);
+    }
+    else {
+        input.value = "0";
     }
 }
 
 function decrementMinutes(inputId) {
     var input = document.getElementById(inputId);
     if (parseInt(input.value) > 0) {
-        input.value = (parseInt(input.value) - 10);
+        input.value = (parseInt(input.value) - 5);
+    }
+    else {
+        input.value = "55";
     }
 }
