@@ -1,7 +1,16 @@
-html,
-body {
-  height: 80%;
+html {
+  height: 100vh;
+}
 
+body {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +20,6 @@ body {
 #sleepwell-logo {
   height: auto;
   width: 400px;
-  margin-top: 50px;
   margin-bottom: 30px;
 }
 
@@ -72,11 +80,14 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+#submit-container {
+  padding: 15px 0;
+}
+
 #submit-button {
   font-family: Arial, sans-serif;
   font-size: 20px;
   padding: 15px;
-  margin-top: 50px;
   background-color: white;
   border: none;
   width: max-content;
@@ -87,4 +98,26 @@ input[type="number"] {
 
 #submit-button:hover {
   opacity: 0.75;
+}
+
+
+@media (max-width: 1050px) {
+
+  #mode1-inputs {
+    width: 80%;
+  }
+
+  .input-mode {
+    width: 80%;
+  }
+
+  input {
+    width: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  #sleepwell-logo {
+    width: 300px;
+  }
 }

@@ -11,31 +11,35 @@
     <title>Sleep well - Dormez mieux</title>
 </head>
 <body>
-    <img id="sleepwell-logo" src="{{url_for('static', filename='images/sleepwell-logo.png')}}" alt="SleepWell-logo">
-    <form action="/result" method="GET">
-        <div id="mode1-container" class="input-mode input-form">
-            <label for="mode1">Donner l'heure à laquelle je veux me réveiller et recevoir les meilleurs heures pour aller dormir</label>
-            <input type="radio" id="mode1" name="mode" value="mode1">
-        </div>
-        <div id="mode1-inputs">
-            <div id="input-hour" class="input-form">
-                <label for="hour">Heures</label>
-                <input type="number" id="hour" name="hour" value="07" onkeydown="return false" required />
-                <button type="button" onclick="decrementHours('hour')">-</button>
-                <button type="button" onclick="incrementHours('hour')">+</button>
+    <div id="home-container">
+        <img id="sleepwell-logo" src="{{url_for('static', filename='images/sleepwell-logo.png')}}" alt="SleepWell-logo">
+        <form action="/result" method="GET">
+            <div id="mode1-container" class="input-mode input-form">
+                <label for="mode1">Donner l'heure à laquelle je veux me réveiller et recevoir les meilleurs heures pour aller dormir</label>
+                <input type="radio" id="mode1" name="mode" value="mode1">
             </div>
-            <div id="input-minutes" class="input-form">
-            <label for="minutes">Minutes</label>
-                <input type="number" id="minutes" name="minutes" value="15" onkeydown="return false" required />
-                <button type="button" onclick="decrementMinutes('minutes')">-</button>
-                <button type="button" onclick="incrementMinutes('minutes')">+</button>
+            <div id="mode1-inputs">
+                <div id="input-hour" class="input-form">
+                    <label for="hour">Heures</label>
+                    <input type="number" id="hour" name="hour" value="07" onkeydown="return false" required />
+                    <button type="button" onclick="decrementHours('hour')">-</button>
+                    <button type="button" onclick="incrementHours('hour')">+</button>
+                </div>
+                <div id="input-minutes" class="input-form">
+                <label for="minutes">Minutes</label>
+                    <input type="number" id="minutes" name="minutes" value="15" onkeydown="return false" required />
+                    <button type="button" onclick="decrementMinutes('minutes')">-</button>
+                    <button type="button" onclick="incrementMinutes('minutes')">+</button>
+                </div>
             </div>
-        </div>
-        <div id="mode2-container" class="input-mode input-form">
-            <label for="mode2">Aller dormir maintenant et recevoir les meilleures heures pour me réveiller</label>
-            <input type="radio" id="mode2" name="mode" value="mode2">
-        </div>
-        <input id="submit-button" type="submit" value="Mieux dormir" hidden>
-    </form>
+            <div id="mode2-container" class="input-mode input-form">
+                <label for="mode2">Aller dormir maintenant et recevoir les meilleures heures pour me réveiller</label>
+                <input type="radio" id="mode2" name="mode" value="mode2">
+            </div>
+            <div id="submit-container">
+                <input id="submit-button" type="submit" value="Mieux dormir" hidden>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

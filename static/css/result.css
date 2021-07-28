@@ -14,7 +14,8 @@ body {
 }
 
 #result-text {
-    margin: 60px 0;
+    text-align: center;
+    padding: 60px 0;
 }
 
 .time-container {
@@ -52,7 +53,7 @@ body {
 }
 
 #additional-information {
-    margin: 60px 0;
+    padding: 60px 0;
 }
 
 #additional-information p {
@@ -60,4 +61,11 @@ body {
     font-weight: lighter;
     font-size: 18px;
     margin: 5px 0;
+}
+
+@media (max-width: 1000px) {
+    #result-container {
+        height: 100%;
+        width: 80%;
+    }
 }
