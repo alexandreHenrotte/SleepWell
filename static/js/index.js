@@ -5,6 +5,8 @@ document.getElementById("mode1-container").addEventListener("click", mode1);
 document.getElementById("mode2-container").addEventListener("click", mode2);
 
 function mode1() {
+    document.getElementById("mode1").checked = true;
+    document.getElementById("mode2").checked = false;
     document.getElementById("mode1-container").style.border = "3px solid white";
     document.getElementById("mode2-container").style.border = null;
     document.getElementById("mode1-inputs").style.display = "inherit"
@@ -12,6 +14,8 @@ function mode1() {
 }
 
 function mode2() {
+    document.getElementById("mode2").checked = true;
+    document.getElementById("mode1").checked = false;
     document.getElementById("mode2-container").style.border = "3px solid white";
     document.getElementById("mode1-container").style.border = null;
     document.getElementById("mode1-inputs").style.display = "none"
