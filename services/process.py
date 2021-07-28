@@ -41,25 +41,27 @@ def mode1(hour, minutes):
 
 
 def mode2():
+    current_time = datetime.utcnow() + timedelta(hours=2) # UTC+2
+
     time_1 = {
         "level" : "Risqué",
         "nb_cycles" : 3,
-        "time" : datetime.today() + timedelta(hours=4, minutes=45)
+        "time" : current_time + timedelta(hours=4, minutes=45)
     }
     time_2 = {
         "level" : "Minimum",
         "nb_cycles" : 4,
-        "time" : datetime.today() + timedelta(hours=6, minutes=15)
+        "time" : current_time + timedelta(hours=6, minutes=15)
     }
     time_3 = {
         "level" : "Bien",
         "nb_cycles" : 5,
-        "time" : datetime.today() + timedelta(hours=7, minutes=45)
+        "time" : current_time + timedelta(hours=7, minutes=45)
     }
     time_4 = {
         "level" : "Très bien",
         "nb_cycles" : 6,
-        "time" : datetime.today() + timedelta(hours=9, minutes=15)
+        "time" : current_time + timedelta(hours=9, minutes=15)
     }
 
     raw_time_list = [time_1, time_2, time_3, time_4]
