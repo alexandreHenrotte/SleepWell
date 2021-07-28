@@ -1,6 +1,3 @@
-import os
-import subprocess
-import re
 from time import sleep
 from datetime import date, datetime, timedelta
 
